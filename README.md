@@ -4,7 +4,7 @@ This is an implementation to use Canny, Depth, Redux and Fill Flux1.dev ControlN
 FluxTool code taken from DenOfEquity's forgeFlux_dualPrompt extension https://github.com/DenOfEquity/forgeFlux_dualPrompt
 I have added the preprocessor system and the outpaint system, in any case, the main credit is from DenOfEquity https://github.com/DenOfEquity
 
-![image](https://github.com/AcademiaSD/sd-forge-fluxtools-v2/blob/main/sd-forge-flux1tools/assets/fluxtoolsv2_canny.webp)
+![image](https://github.com/AcademiaSD/sd-forge-fluxtools-v2/blob/main/assets/fluxtoolsv2_canny.webp)
 
 
 ## Install
