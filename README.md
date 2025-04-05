@@ -36,3 +36,5 @@ Go to the Extensions tab > Install from URL > URL for this repository.
 > - For Fill
 >   (https://huggingface.co/Academia-SD/flux1-Fill-Dev-FP8/tree/main)
 >
+
+![image](https://github.com/AcademiaSD/sd-forge-fluxtools-v2/blob/main/assets/fluxtoolsv2_depth.webp)
