@@ -38,3 +38,5 @@ Go to the Extensions tab > Install from URL > URL for this repository.
 >
 
 ![image](https://github.com/AcademiaSD/sd-forge-fluxtools-v2/blob/main/assets/fluxtoolsv2_depth.webp)
+
+![image](https://github.com/AcademiaSD/sd-forge-fluxtools-v2/blob/main/assets/fluxtoolsv2_fill_outpaint.png)
