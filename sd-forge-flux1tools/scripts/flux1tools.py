@@ -1,4 +1,4 @@
-#v019
+#v023
 from backend import memory_management
 from backend.diffusion_engine.flux import Flux
 import gradio
@@ -195,10 +195,10 @@ class flux1tools(scripts.Script):
                 gradio.Markdown("Use an appropriately Flux Canny checkpoint.")
                 with gradio.Row():
                     with gradio.Column():
-                        canny_image = gradio.Image(label="Reference Image", type="pil", height=400, sources=["upload", "clipboard"])
+                        canny_image = gradio.Image(label="Reference Image", type="pil", height=500, sources=["upload", "clipboard"])
                         canny_ref_info = gradio.Markdown("Reference image aspect ratio: *no image*")
                     with gradio.Column():
-                        canny_preproc_preview = gradio.Image(label="Preprocessor Preview", type="pil", height=400)
+                        canny_preproc_preview = gradio.Image(label="Preprocessor Preview", type="pil", height=500)
                 # Primera fila: Low Threshold, High Threshold y Run preprocessor en la misma línea
                 with gradio.Row():
                     canny_low_threshold = gradio.Slider(label="Low Threshold", minimum=0, maximum=255, step=1, value=100)
@@ -227,10 +227,10 @@ class flux1tools(scripts.Script):
                 gradio.Markdown("Use an appropriately Flux Depth checkpoint..")
                 with gradio.Row():
                     with gradio.Column():
-                        depth_image = gradio.Image(label="Reference Image", type="pil", height=400, sources=["upload", "clipboard"])
+                        depth_image = gradio.Image(label="Reference Image", type="pil", height=500, sources=["upload", "clipboard"])
                         depth_ref_info = gradio.Markdown("Reference image aspect ratio: *no image*")
                     with gradio.Column():
-                        depth_preproc_preview = gradio.Image(label="Preprocessor Preview", type="pil", height=400)
+                        depth_preproc_preview = gradio.Image(label="Preprocessor Preview", type="pil", height=500)
                 # Se utiliza un Dropdown para seleccionar el procesador y se oculta el botón manual
                 with gradio.Row():
                     depth_processor_selector = gradio.Dropdown(label="Processor", choices=["depth_zoe", "depth_midas", "depth_leres", "depth_leres++"], value="depth_zoe")
@@ -254,7 +254,7 @@ class flux1tools(scripts.Script):
                 gradio.Markdown("Use an appropriately Flux Fill checkpoint.")
                 with gradio.Row():
                     fill_image = ForgeCanvas(
-                        height=300,
+                        height=500,
                         contrast_scribbles=shared.opts.img2img_inpaint_mask_high_contrast,
                         scribble_color=shared.opts.img2img_inpaint_mask_brush_color,
                         scribble_color_fixed=True,
@@ -275,7 +275,7 @@ class flux1tools(scripts.Script):
                     
                     # Botón para aplicar expansión
                     with gradio.Row():
-                        apply_outpaint_button = gradio.Button("Apply Outpaint Canvas")
+                        apply_outpaint_button = gradio.Button("Apply Outpaint")
                     
                     # Información sobre dimensiones actuales y nuevas
                     fill_dimensions_info = gradio.Markdown("Current dimensions: N/A")
@@ -327,7 +327,7 @@ class flux1tools(scripts.Script):
                 gradio.Markdown("Use an appropriately Flux checkpoint.")
                 with gradio.Row():
                     with gradio.Column():
-                        redux_image1 = gradio.Image(show_label=False, type="pil", height=400, sources=["upload", "clipboard"])
+                        redux_image1 = gradio.Image(show_label=False, type="pil", height=500, sources=["upload", "clipboard"])
                     with gradio.Column():
                         redux_str1 = gradio.Slider(label="Strength", minimum=0.0, maximum=2.0, step=0.01, value=1.0)
                         redux_time1 = RangeSlider(label="Start / End", minimum=0.0, maximum=1.0, step=0.01, value=(0.0, 0.8))
@@ -338,7 +338,7 @@ class flux1tools(scripts.Script):
                 gradio.Markdown("Use an appropriately Flux checkpoint.")
                 with gradio.Row():
                     with gradio.Column():
-                        redux_image2 = gradio.Image(show_label=False, type="pil", height=400, sources=["upload", "clipboard"])
+                        redux_image2 = gradio.Image(show_label=False, type="pil", height=500, sources=["upload", "clipboard"])
                     with gradio.Column():
                         redux_str2 = gradio.Slider(label="Strength", minimum=0.0, maximum=2.0, step=0.01, value=1.0)
                         redux_time2 = RangeSlider(label="Start / End", minimum=0.0, maximum=1.0, step=0.01, value=(0.0, 0.8))
@@ -349,7 +349,7 @@ class flux1tools(scripts.Script):
                 gradio.Markdown("Use an appropriately Flux checkpoint.")
                 with gradio.Row():
                     with gradio.Column():
-                        redux_image3 = gradio.Image(show_label=False, type="pil", height=400, sources=["upload", "clipboard"])
+                        redux_image3 = gradio.Image(show_label=False, type="pil", height=500, sources=["upload", "clipboard"])
                     with gradio.Column():
                         redux_str3 = gradio.Slider(label="Strength", minimum=0.0, maximum=2.0, step=0.01, value=1.0)
                         redux_time3 = RangeSlider(label="Start / End", minimum=0.0, maximum=1.0, step=0.01, value=(0.0, 0.8))
@@ -360,7 +360,7 @@ class flux1tools(scripts.Script):
                 gradio.Markdown("Use an appropriately Flux checkpoint.")
                 with gradio.Row():
                     with gradio.Column():
-                        redux_image4 = gradio.Image(show_label=False, type="pil", height=400, sources=["upload", "clipboard"])
+                        redux_image4 = gradio.Image(show_label=False, type="pil", height=500, sources=["upload", "clipboard"])
                     with gradio.Column():
                         redux_str4 = gradio.Slider(label="Strength", minimum=0.0, maximum=2.0, step=0.01, value=1.0)
                         redux_time4 = RangeSlider(label="Start / End", minimum=0.0, maximum=1.0, step=0.01, value=(0.0, 0.8))
