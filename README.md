@@ -15,6 +15,10 @@ Go to the Extensions tab > Install from URL > URL for this repository.
 > Easiest way to ensure necessary diffusers release is installed is to edit requirements_versions.txt in the webUI directory.
 > 
 > diffusers>=0.32.0
+>
+> Redux models will be downloaded on first use, just under 1Gb.
+> Depth models will be downloaded on first use, just under 2.6Gb.
+
 
 ## Downloads
 > [!NOTE]  
