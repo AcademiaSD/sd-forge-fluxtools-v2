@@ -13,7 +13,7 @@ Go to the Extensions tab > Install from URL > URL for this repository.
 > [!WARNING]  
 > Easiest way to ensure necessary diffusers release is installed is to edit requirements_versions.txt in the webUI directory.
 > 
-> diffusers>=0.32.0,
+> diffusers>=0.32.0
 
 ## Downloads
 > [!NOTE]  
