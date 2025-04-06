@@ -156,13 +156,13 @@ class flux1tools(scripts.Script):
             
             # Rellenar áreas expandidas en la máscara (blanco = áreas a generar)
             if expand_up > 0:
-                draw.rectangle([(0, 0), (new_width, expand_up)], fill=(255, 255, 255, 255))
+                draw.rectangle([(0, 0), (new_width, expand_up)], fill=(100, 255, 100, 255))
             if expand_down > 0:
-                draw.rectangle([(0, new_height - expand_down), (new_width, new_height)], fill=(255, 255, 255, 255))
+                draw.rectangle([(0, new_height - expand_down), (new_width, new_height)], fill=(100, 255, 100, 255))
             if expand_left > 0:
-                draw.rectangle([(0, expand_up), (expand_left, new_height - expand_down)], fill=(255, 255, 255, 255))
+                draw.rectangle([(0, expand_up), (expand_left, new_height - expand_down)], fill=(100, 255, 100, 255))
             if expand_right > 0:
-                draw.rectangle([(new_width - expand_right, expand_up), (new_width, new_height - expand_down)], fill=(255, 255, 255, 255))
+                draw.rectangle([(new_width - expand_right, expand_up), (new_width, new_height - expand_down)], fill=(100, 255, 100, 255))
                 
             return new_image, new_mask
             
@@ -267,11 +267,11 @@ class flux1tools(scripts.Script):
                 with gradio.Accordion("Outpaint Options", open=False):
                     # Sliders para controlar la expansión en cada dirección
                     with gradio.Row():
-                        fill_expand_up = gradio.Slider(label="Expand Up:", minimum=0, maximum=512, step=64, value=0)
-                        fill_expand_down = gradio.Slider(label="Expand Down:", minimum=0, maximum=512, step=64, value=0)
+                        fill_expand_up = gradio.Slider(label="Expand Up ↑", minimum=0, maximum=512, step=64, value=0)
+                        fill_expand_down = gradio.Slider(label="Expand Down ↓", minimum=0, maximum=512, step=64, value=0)
                     with gradio.Row():
-                        fill_expand_left = gradio.Slider(label="Expand Left:", minimum=0, maximum=512, step=64, value=0)
-                        fill_expand_right = gradio.Slider(label="Expand Right:", minimum=0, maximum=512, step=64, value=0)
+                        fill_expand_left = gradio.Slider(label="Expand Left ←", minimum=0, maximum=512, step=64, value=0)
+                        fill_expand_right = gradio.Slider(label="Expand Right →", minimum=0, maximum=512, step=64, value=0)
                     
                     # Botón para aplicar expansión
                     with gradio.Row():
@@ -287,8 +287,8 @@ class flux1tools(scripts.Script):
                         width, height = image.size
                         new_width = width + left + right
                         new_height = height + up + down
-                        return f"Current dimensions: {width}×{height} → New dimensions: {new_width}×{new_height}"
-                    
+                        return f"Current dimensions: {width}×{height}"
+                        #return f"Current dimensions: {width}×{height} → New dimensions: {new_width}×{new_height}"
                     # Actualizar info al cambiar valores
                     fill_image.background.change(
                         fn=update_dimensions_info, 
