@@ -9,6 +9,8 @@ I have added the preprocessor system and the outpaint system, in any case, the m
 
 ## Install
 Go to the Extensions tab > Install from URL > URL for this repository.
+Video instructions: https://www.youtube.com/watch?v=MHYSFBkF36s
+
 
 ## Requierements
 > [!WARNING]  
