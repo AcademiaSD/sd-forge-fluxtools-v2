@@ -19,6 +19,8 @@ Video instructions: https://www.youtube.com/watch?v=MHYSFBkF36s
 > 
 > diffusers>=0.32.0
 >
+> controlnet-aux>=0.0.9
+>
 > Redux models will be downloaded on first use, just under 1Gb.
 > Depth models will be downloaded on first use, just under 2.6Gb.
 
